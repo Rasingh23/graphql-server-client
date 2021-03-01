@@ -1,0 +1,104 @@
+.App {
+  font-family: monospace;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  /* background-color: cornflowerblue; */
+}
+
+:root {
+  --background-color: #fefefe;
+  --color: #343434;
+  --primary-color: #8739f9;
+}
+
+button {
+  border-radius: 10px;
+  width: 20rem;
+  height: 3rem;
+  /* padding: 0.5rem 3rem; */
+  color: var(--color);
+  background-color: var(--primary-color);
+  transition: background-color 1000ms linear;
+  transition: color 1000ms linear;
+}
+body {
+  font-family: sans-serif;
+  /* text-align: center; */
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: background-color 1000ms linear;
+  transition: color 1000ms linear;
+}
+
+p {
+  /* height: 100px;
+  width: 400px;
+  background-color: crimson;*/
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+/* p: {
+  opacity: 1;
+}
+#source.nofade {
+  opacity: 1;
+} */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
